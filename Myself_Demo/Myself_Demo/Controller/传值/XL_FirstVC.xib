@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XL_FirstVC">
+            <connections>
+                <outlet property="_blockBtn" destination="Zrd-N6-b4e" id="UTQ-z6-OvQ"/>
+                <outlet property="_delegateBtn" destination="BIv-Af-YMc" id="UGi-mH-Tmx"/>
+                <outlet property="_notificationBtn" destination="aPn-Ps-p8h" id="mHC-vc-jIe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIv-Af-YMc">
+                    <rect key="frame" x="110" y="84" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.63137254899999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="cpP-ct-51U"/>
+                        <constraint firstAttribute="width" constant="100" id="kre-6y-ciU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="代理">
+                        <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="passAction:" destination="-1" eventType="touchUpInside" id="D4B-Lg-EBJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrd-N6-b4e">
+                    <rect key="frame" x="110" y="234" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.63137254899999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="WWr-r9-ZLz"/>
+                        <constraint firstAttribute="width" constant="100" id="vPV-t8-OGF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Blcok">
+                        <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="passAction:" destination="-1" eventType="touchUpInside" id="h5b-RK-3gC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-Ps-p8h">
+                    <rect key="frame" x="110" y="384" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.63137254899999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Ake-cG-D6t"/>
+                        <constraint firstAttribute="width" constant="100" id="efA-hF-vSo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="消息通知">
+                        <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="passAction:" destination="-1" eventType="touchUpInside" id="TvQ-UM-icq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Zrd-N6-b4e" secondAttribute="centerX" id="1GO-4V-Sef"/>
+                <constraint firstAttribute="centerX" secondItem="aPn-Ps-p8h" secondAttribute="centerX" id="5c7-AA-Q7T"/>
+                <constraint firstItem="Zrd-N6-b4e" firstAttribute="top" secondItem="BIv-Af-YMc" secondAttribute="bottom" constant="50" id="74N-Kf-gAd"/>
+                <constraint firstAttribute="centerX" secondItem="BIv-Af-YMc" secondAttribute="centerX" id="GUi-eZ-EX9"/>
+                <constraint firstAttribute="centerY" secondItem="Zrd-N6-b4e" secondAttribute="centerY" id="VMP-99-VSv"/>
+                <constraint firstItem="aPn-Ps-p8h" firstAttribute="top" secondItem="Zrd-N6-b4e" secondAttribute="bottom" constant="50" id="xcE-4W-l8M"/>
+            </constraints>
+            <point key="canvasLocation" x="105" y="323"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

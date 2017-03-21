@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="80" id="KGk-i7-Jjw" customClass="XL_ProductCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x80-rM-vJB">
+                        <rect key="frame" x="10" y="29" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Jzj-3b-yT1"/>
+                            <constraint firstAttribute="width" constant="22" id="Q3b-2f-EML"/>
+                        </constraints>
+                        <state key="normal" image="uncheck.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="checkbox1.png"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvp-69-SRD">
+                        <rect key="frame" x="45" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Em5-4B-h1D"/>
+                            <constraint firstAttribute="height" constant="60" id="N5i-Hw-2XW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="a2z-OW-eWJ">
+                        <rect key="frame" x="115" y="10" width="192" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格:￥88.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BK7-Wf-Wui">
+                        <rect key="frame" x="115" y="49" width="71" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="y0E-wd-eps"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.98823529409999999" green="0.21960784310000001" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="a2z-OW-eWJ" secondAttribute="trailing" constant="13" id="14V-9I-8l9"/>
+                    <constraint firstItem="a2z-OW-eWJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="76c-7W-R9k"/>
+                    <constraint firstItem="x80-rM-vJB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Cfg-5X-k6K"/>
+                    <constraint firstItem="dvp-69-SRD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="K0P-fp-0AX"/>
+                    <constraint firstItem="dvp-69-SRD" firstAttribute="leading" secondItem="x80-rM-vJB" secondAttribute="trailing" constant="13" id="Rdw-G5-BhM"/>
+                    <constraint firstItem="BK7-Wf-Wui" firstAttribute="leading" secondItem="dvp-69-SRD" secondAttribute="trailing" constant="10" id="bL3-ba-bNI"/>
+                    <constraint firstItem="x80-rM-vJB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="gMX-gq-fuC"/>
+                    <constraint firstAttribute="bottom" secondItem="BK7-Wf-Wui" secondAttribute="bottom" constant="10" id="gtK-DF-kd3"/>
+                    <constraint firstItem="a2z-OW-eWJ" firstAttribute="leading" secondItem="dvp-69-SRD" secondAttribute="trailing" constant="10" id="vwc-HP-feQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="productImage" destination="dvp-69-SRD" id="kOa-dx-CwH"/>
+                <outlet property="productName" destination="a2z-OW-eWJ" id="I8f-Uh-OUb"/>
+                <outlet property="productPrice" destination="BK7-Wf-Wui" id="XJ8-9K-jrL"/>
+                <outlet property="selectionBtn" destination="x80-rM-vJB" id="dOV-Zf-NTP"/>
+            </connections>
+            <point key="canvasLocation" x="210" y="158"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox1.png" width="22" height="22"/>
+        <image name="uncheck.png" width="22" height="22"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XL_SQLiteVC">
+            <connections>
+                <outlet property="_sqlTableview" destination="DT0-un-Pkm" id="du7-Fa-RL4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OI-u9-AEU">
+                    <rect key="frame" x="50" y="40" width="60" height="30"/>
+                    <state key="normal" title="插入数据">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="insertAction:" destination="-1" eventType="touchUpInside" id="PO0-LL-aSU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEk-tc-kRw">
+                    <rect key="frame" x="210" y="40" width="60" height="30"/>
+                    <state key="normal" title="读取数据">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="readerAction:" destination="-1" eventType="touchUpInside" id="ioR-DG-yk7"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DT0-un-Pkm">
+                    <rect key="frame" x="0.0" y="124" width="320" height="250"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="LBv-QB-0RQ"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2Fe-Mf-1uo"/>
+                        <outlet property="delegate" destination="-1" id="V9M-LU-QoU"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6OI-u9-AEU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="CeP-Z4-jcj"/>
+                <constraint firstItem="DT0-un-Pkm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E9U-64-MWb"/>
+                <constraint firstItem="vEk-tc-kRw" firstAttribute="top" secondItem="6OI-u9-AEU" secondAttribute="top" id="EzC-YV-t7C"/>
+                <constraint firstItem="DT0-un-Pkm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="124" id="F0s-r8-CF2"/>
+                <constraint firstAttribute="trailing" secondItem="DT0-un-Pkm" secondAttribute="trailing" id="NvO-LS-dun"/>
+                <constraint firstAttribute="centerX" secondItem="6OI-u9-AEU" secondAttribute="centerX" multiplier="2:1" id="hhz-80-RnF"/>
+                <constraint firstAttribute="centerX" secondItem="vEk-tc-kRw" secondAttribute="centerX" multiplier="2:3" id="syi-I4-20Y"/>
+            </constraints>
+            <point key="canvasLocation" x="280" y="323"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
